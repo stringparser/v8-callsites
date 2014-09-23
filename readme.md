@@ -53,8 +53,8 @@ function baz(){
 
 `require('v8-callsites')([frames, origin])`
 
- - `frames`, if specified should be bigger than `0` and be `integer`.
- - `origin`, if specified should be a function.
+ - `frames` if specified should be bigger than `0` and `integer`.
+ - `origin` if specified should be a function.
  - when there is no arguments, the default number of `frames` is `1`.
 
 See also the [avaliable methods](https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi) of the stack trace api like:
