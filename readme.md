@@ -8,7 +8,7 @@
 
 ## why
 
-You want to specify how many frames are recorded and from which function the stack should be traced back.
+You would like to set how many frames are recorded (`Error.stackTraceLimit`) and from which function the stack should be traced back (`Error.captureStackTrace`).
 
 It serves for the same use cases implemented on this cool modules
 
