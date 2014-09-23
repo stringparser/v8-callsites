@@ -8,14 +8,14 @@
 
 ## why
 
-Allow to specify how many frames are recorded and which function should be taken as the for the first frame of the stack.
+You want to specify how many frames are recorded and from which function the stack should be traced back.
 
-Is the same use case implemented on this cool modules
+It serves for the same use cases implemented on this cool modules
 
- - [`callsite`](https://github.com/visionmedia/callsite)
- - [`callsites`](https://github.com/sindresorhus/callsites)
+ - [visionmedia `callsite`](https://github.com/visionmedia/callsite)
+ - [sindresorhus `callsites`](https://github.com/sindresorhus/callsites)
 
-But a little lighter regarding how frames are recorded. By the default only one frame is recorded and you can specify the `origin` of stack trace for the `callsite` generation.
+but a little lighter regarding how frames are recorded. By default only one frame is recorded and you can specify the `origin` of stack trace for the `callsite` generation.
 
 ## usage
 

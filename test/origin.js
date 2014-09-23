@@ -35,7 +35,7 @@ module.exports = function(){
     }
   });
 
-  it('origin of callsite can be adjusted', function origin(){
+  it('origin of callsites can be adjusted', function origin(){
 
     foo();
     function foo(){
@@ -51,9 +51,9 @@ module.exports = function(){
       var barstack = sites(bar);
       var bazstack = sites(baz);
 
-      should(foostack[0].getFunction()).equal(origin);
-      should(barstack[0].getFunction()).equal(foo);
-      should(bazstack[0].getFunction()).equal(bar);
+      should(foostack[0].getFunctionName()).equal('origin');
+      should(barstack[0].getFunctionName()).equal('foo');
+      should(bazstack[0].getFunctionName()).equal('bar');
 
     }
   });

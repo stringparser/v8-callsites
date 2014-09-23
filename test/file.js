@@ -8,7 +8,7 @@ module.exports = function(){
   var calls = require('../.');
   var call = calls();
 
-  it('should return test.main fileName', function(){
+  it('should return test.main filename', function(){
     should(call[0].getFileName())
       .equal(
         __filename.replace(
