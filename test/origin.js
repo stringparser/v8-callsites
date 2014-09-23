@@ -7,6 +7,7 @@ module.exports = function(){
 
   var sites = require('../.');
 
+
   it('returns array of callsites', function(){
 
     foo();
@@ -43,13 +44,8 @@ module.exports = function(){
       var bazstack = sites(baz);
 
       should(foostack[0].getLineNumber()).equal(31);
-      should(foostack[0].fun).equal(origin);
-
       should(barstack[0].getLineNumber()).equal(33);
-      should(barstack[0].fun).equal(foo);
-
       should(bazstack[0].getLineNumber()).equal(37);
-      should(bazstack[0].fun).equal(bar);
 
     }
   });
