@@ -43,9 +43,9 @@ module.exports = function(){
       var barstack = sites(bar);
       var bazstack = sites(baz);
 
-      should(foostack[0].getLineNumber()).equal(31);
-      should(barstack[0].getLineNumber()).equal(33);
-      should(bazstack[0].getLineNumber()).equal(37);
+      should(foostack[0].getLineNumber()).equal(32);
+      should(barstack[0].getLineNumber()).equal(34);
+      should(bazstack[0].getLineNumber()).equal(38);
 
     }
   });
