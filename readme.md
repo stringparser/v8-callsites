@@ -6,17 +6,6 @@
 
 [V8 stacktrace API](https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi) callsites with knobs.
 
-## why
-
-You would like to set how many frames are recorded (`Error.stackTraceLimit`) and from which function the stack should be traced back (`Error.captureStackTrace`).
-
-It serves for the same use cases implemented on this cool modules
-
- - [visionmedia `callsite`](https://github.com/visionmedia/callsite)
- - [sindresorhus `callsites`](https://github.com/sindresorhus/callsites)
-
-but a little lighter regarding how frames are recorded. By default only one frame is recorded and you can specify the `origin` of stack trace for the `callsite` generation.
-
 ## usage
 
 ```js
@@ -48,6 +37,21 @@ function baz(){
 }
 
 ```
+
+## why
+
+You would like to set how many frames are recorded (`Error.stackTraceLimit`) and from which function the stack should be traced back (`Error.captureStackTrace`).
+
+By default two frames are recorded, though you can even lower it to one providing a function from which start.
+
+### inspirated by
+
+It serves for the same use cases implemented on this cool modules
+
+ - [visionmedia `callsite`](https://github.com/visionmedia/callsite)
+ - [sindresorhus `callsites`](https://github.com/sindresorhus/callsites)
+
+I've been using those a lot.
 
 ### api
 
