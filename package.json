@@ -26,6 +26,6 @@
     "should": "*"
   },
   "scripts": {
-    "test": "mocha --reporter spec",
+    "test": "mocha --reporter spec"
   }
 }
