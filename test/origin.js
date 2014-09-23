@@ -70,7 +70,7 @@ module.exports = function(){
       last.receiver.process.mainModule.children
         .filter(function(child){
           return child.id === require.resolve('mocha');
-        })
-    ).match(/mocha\/index\.js$/)
+        })[0].id
+    ).match(/mocha\/index\.js$/);
   });
 };
