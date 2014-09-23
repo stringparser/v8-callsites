@@ -55,7 +55,7 @@ function baz(){
 
  - `frames` if specified should be bigger than `0` and `integer`.
  - `origin` if specified should be a function.
- - when there is no arguments, the default number of `frames` is `1`.
+ - if no arguments, the default number of `frames` is `1` and the `origin` is the module itself, that will make the first element of the `callsites` array to be the `callee`.
 
 See also the [avaliable methods](https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi) of the stack trace api like:
  - `getLineNumber`
