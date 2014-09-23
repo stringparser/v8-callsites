@@ -8,7 +8,7 @@
 
 ## why
 
-Allow to specify how many frames are recorded and what must be the function will be taked as the start of the stack.
+Allow to specify how many frames are recorded and which function should be taken as the for the first frame of the stack.
 
 Is the same use case implemented on this cool modules
 
@@ -64,4 +64,4 @@ function baz(){
 
 ### license
 
-MIT
+[<img alt="LICENSE" src="http://img.shields.io/npm/l/v8-callsites.svg?style=flat-square"/>](http://opensource.org/licenses/MIT)
