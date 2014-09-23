@@ -12,7 +12,7 @@ module.exports = function(){
     foo();
     function foo(){
       var stack = sites();
-      should(stack[0].getFunction()).equal(origin);
+      should(stack[0].getFunctionName()).equal('origin');
     }
   });
 
@@ -29,9 +29,9 @@ module.exports = function(){
 
     function baz() {
       var stack = sites(3);
-      should(stack[0].getFunction()).equal(bar);
-      should(stack[1].getFunction()).equal(foo);
-      should(stack[2].getFunction()).equal(origin);
+      should(stack[0].getFunctionName()).equal('bar');
+      should(stack[1].getFunctionName()).equal('foo');
+      should(stack[2].getFunctionName()).equal('origin');
     }
   });
 
