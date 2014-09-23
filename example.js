@@ -1,6 +1,6 @@
 'use strict';
 
-var stack = require('./.');
+var stack = require('v8-callsites');
 
 origin();
 
@@ -17,8 +17,10 @@ function bar(){
 }
 
 function baz(){
-  
-  stack(3, bar).forEach(function(frame){
+
+  var barstackFrombaz = stack(3, bar);
+
+  barstackFrombaz.forEach(function(frame){
     console.log(
       frame.getFunctionName(), '->', frame+''
     );
