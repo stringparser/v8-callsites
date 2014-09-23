@@ -51,7 +51,7 @@ function baz(){
 
 ### api
 
-`callsites([frames, origin])`
+`require('v8-callsites')([frames, origin])`
 
  - frames, if specified should be bigger than `0` integer.
  - origin, if specified should be a function.
