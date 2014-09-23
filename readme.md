@@ -43,10 +43,12 @@ function bar(){
 }
 
 function baz(){
-  stack(3, bar).forEach(function(frame){
+
+  var barstackFrombaz = stack(3, bar);
+
+  barstackFrombaz.forEach(function(frame){
     console.log(
-      frame.getFunctionName(),
-      '->', frame+''
+      frame.getFunctionName(), '->', frame+''
     );
   });
 }
