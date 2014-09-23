@@ -21,9 +21,9 @@ module.exports = function(){
 
     function baz() {
       var stack = sites(3);
-      should(stack[0].fun).equal(baz);
-      should(stack[1].fun).equal(bar);
-      should(stack[2].fun).equal(foo);
+      should(stack[0].getLineNumber()).equal(23);
+      should(stack[1].getLineNumber()).equal(19);
+      should(stack[2].getLineNumber()).equal(15);
     }
   });
 
