@@ -19,12 +19,6 @@ But a little lighter regarding how frames are recorded. By the default only one 
 
 ## usage
 
-Same as the mentioned modules above. See also the [avaliable methods](https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi) of the stack trace api like:
- - `getLineNumber`
- - `getFileName`
- - `getEvalOrigin`
- - etc.
-
 ```js
 var stack = require('v8-callsites');
 
@@ -61,6 +55,12 @@ function baz(){
 
  - frames, if specified should be bigger than `0` integer.
  - origin, if specified should be a function.
+
+See also the [avaliable methods](https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi) of the stack trace api like:
+ - `getLineNumber`
+ - `getFileName`
+ - `getEvalOrigin`
+ - etc.
 
 ### license
 
