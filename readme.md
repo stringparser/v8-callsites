@@ -15,11 +15,15 @@ Is the same use case implemented on this cool modules
  - [`callsite`](https://github.com/visionmedia/callsite)
  - [`callsites`](https://github.com/sindresorhus/callsites)
 
-But a little lithgter when recording frames. By the default only one frame is recorded and you can specify the `origin` of stack trace for the `callsite` generation.
+But a little lighter regarding how frames are recorded. By the default only one frame is recorded and you can specify the `origin` of stack trace for the `callsite` generation.
 
 ## usage
 
-Same as the mentioned modules above.
+Same as the mentioned modules above. See also the [avaliable methods](https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi) of the stack trace api like:
+ - `getLineNumber`
+ - `getFileName`
+ - `getEvalOrigin`
+ - etc.
 
 ```js
 var stack = require('v8-callsites');
