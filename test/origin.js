@@ -50,23 +50,4 @@ module.exports = function(){
     }
   });
 
-  it('inception', function(){
-
-    var stack = sites();
-
-    var index = 0, last;
-    while(stack[0]){
-      stack = sites(Infinity, stack[index].fun);
-      last = stack[0] ? stack[0] : last;
-      index++;
-    }
-
-    should(index).be.below(10);
-    should(
-      last.receiver.process.mainModule.children
-        .filter(function(child){
-          return child.id === require.resolve('mocha');
-        })[0].id
-    ).match(/mocha\/index\.js$/);
-  });
 };
