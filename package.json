@@ -1,0 +1,35 @@
+{
+  "name": "v8-callsites",
+  "description": "V8 stacktrace API callsites with knobs",
+  "version": "1.0.0",
+  "repository": "stringparser/v8-callsites",
+  "homepage": "https://github.com/stringparser/caller-site",
+  "author": "Javier Carrillo <stringparser@gmail.com>",
+  "tags": [
+    "v8",
+    "stack",
+    "trace",
+    "stacktrace",
+    "callsite",
+    "callsites",
+    "function",
+    "file",
+    "limit",
+    "knobs"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "utils-type": "^0.1.32"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.5",
+    "jshint-stylish": "^0.4.0",
+    "mocha": "^1.21.4",
+    "should": "~4.0.4"
+  },
+  "scripts": {
+    "lint": "jshint lib index.js --reporter node_modules/jshint-stylish/stylish.js --exclude node_modules",
+    "test": "npm run-script lint && mocha --reporter spec",
+    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+  }
+}
