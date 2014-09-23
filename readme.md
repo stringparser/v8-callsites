@@ -8,7 +8,7 @@
 
 ## why
 
-Allow to specify how many frames are recorded and what is the function what will be taked as the start of the stack.
+Allow to specify how many frames are recorded and what must be the function will be taked as the start of the stack.
 
 Is the same use case implemented on this cool modules
 
@@ -19,7 +19,7 @@ But a little lithgter when recording frames. By the default only one frame is re
 
 ## usage
 
-Same as the mentioned modules above. Plus
+Same as the mentioned modules above.
 
 ```js
 var stack = require('v8-callsites');
@@ -39,7 +39,6 @@ function bar(){
 }
 
 function baz(){
-
   stack(3, bar).forEach(function(frame){
     console.log(
       frame.getFunctionName(),
@@ -49,6 +48,13 @@ function baz(){
 }
 
 ```
+
+### api
+
+`callsites([frames, origin])`
+
+ - frames, if specified should be bigger than `0` integer.
+ - origin, if specified should be a function.
 
 ### license
 
