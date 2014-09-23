@@ -1,7 +1,7 @@
 {
   "name": "v8-callsites",
   "description": "V8 stacktrace API callsites with knobs",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "repository": "stringparser/v8-callsites",
   "homepage": "https://github.com/stringparser/caller-site",
   "author": "Javier Carrillo <stringparser@gmail.com>",
