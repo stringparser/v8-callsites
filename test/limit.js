@@ -1,18 +1,20 @@
 'use strict';
 
 var should = require('should');
-var site = require('../.');
 
 module.exports = function(){
 
-  it('should retrieve sites of length 1 as default', function(){
-    var sites = site();
-    should(sites.length).equal(1);
+  var calls = require('../.');
+
+
+  it('should retrieve stacks of length 1 as default', function(){
+    var call = calls();
+    should(call.length).equal(1);
   });
 
   it('should have lenght equal to limit if specified', function(){
-    var sites = site(5);
-    should(sites.length).equal(5);
+    var call = calls(5);
+    should(call.length).equal(5);
   });
 
   it('should restore the stackTraceLimit', function(){

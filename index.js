@@ -10,20 +10,19 @@ function sites(frames, origin){
   var limit = Error.stackTraceLimit;
   var prepare = Error.prepareStackTrace;
 
-  Error.stackTraceLimit = (
-    framesIs.integer > 0 || framesIs.infinity ? frames : 1
-  );
+  origin = framesIs.function || originIs.function || null;
+  frames = framesIs.integer > 0 || framesIs.infinity ? frames : 1;
+
+  Error.stackTraceLimit = origin ? frames : frames + 1;
 
   Error.prepareStackTrace = function(err, stack){
     return stack;
   };
 
   var error = new Error();
-  Error.captureStackTrace(error,
-    framesIs.function || originIs.function || sites
-  );
+  Error.captureStackTrace(error, origin || sites);
 
-  var stack = error.stack;
+  var stack = origin ? error.stack : error.stack.slice(1);
 
   Error.stackTraceLimit = limit;
   Error.prepareStackTrace = prepare;

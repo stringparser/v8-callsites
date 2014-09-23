@@ -4,9 +4,11 @@ var should = require('should');
 
 module.exports = function(){
 
+  var calls = require('../.');
+  var call = calls();
+
   it('should return the line number', function(){
-    var site = require('../.')();
-    should(site[0].getLineNumber()).equal(8);
+    should(call[0].getLineNumber()).equal(16);
   });
 
 };

@@ -7,8 +7,16 @@ module.exports = function(){
 
   var sites = require('../.');
 
+  it('should start from the caller', function origin(){
 
-  it('returns array of callsites', function(){
+    foo();
+    function foo(){
+      var stack = sites();
+      should(stack[0].getFunction()).equal(origin);
+    }
+  });
+
+  it('should return an array of callsites', function origin(){
 
     foo();
     function foo() {
@@ -21,13 +29,13 @@ module.exports = function(){
 
     function baz() {
       var stack = sites(3);
-      should(stack[0].getLineNumber()).equal(23);
-      should(stack[1].getLineNumber()).equal(19);
-      should(stack[2].getLineNumber()).equal(15);
+      should(stack[0].getFunction()).equal(bar);
+      should(stack[1].getFunction()).equal(foo);
+      should(stack[2].getFunction()).equal(origin);
     }
   });
 
-  it('origin of stack can be changed', function origin(){
+  it('origin of callsite can be adjusted', function origin(){
 
     foo();
     function foo(){
@@ -43,9 +51,9 @@ module.exports = function(){
       var barstack = sites(bar);
       var bazstack = sites(baz);
 
-      should(foostack[0].getLineNumber()).equal(32);
-      should(barstack[0].getLineNumber()).equal(34);
-      should(bazstack[0].getLineNumber()).equal(38);
+      should(foostack[0].getFunction()).equal(origin);
+      should(barstack[0].getFunction()).equal(foo);
+      should(bazstack[0].getFunction()).equal(bar);
 
     }
   });

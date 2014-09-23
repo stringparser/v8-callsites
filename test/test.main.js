@@ -13,6 +13,6 @@ testFiles.forEach(function(name){
 
   name = path.basename(name, path.extname(name));
   describe(name, function(){
-    require('./'+name)();
+    require('./'+name)();  // line 16!
   });
 });
