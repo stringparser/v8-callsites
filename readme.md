@@ -6,6 +6,10 @@
 
 [V8 stacktrace API](https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi) callsites with knobs.
 
+## install
+
+    npm install --save v8-callsites
+
 ## usage
 
 ```js
