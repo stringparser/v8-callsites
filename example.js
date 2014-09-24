@@ -18,9 +18,10 @@ function bar(){
 
 function baz(){
 
-  var barstackFrombaz = stack(3, bar);
+  var barStackFrombaz = stack(3, bar);
+  // bar `stack` from baz with only 3 frames
 
-  barstackFrombaz.forEach(function(frame){
+  barStackFrombaz.forEach(function(frame){
     console.log(
       frame.getFunctionName(), '->', frame+''
     );

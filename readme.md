@@ -31,7 +31,8 @@ function bar(){
 
 function baz(){
 
-  var barstackFrombaz = stack(3, bar);
+  var barStackFrombaz = stack(3, bar);
+  // bar `stack` from baz with only 3 frames
 
   barstackFrombaz.forEach(function(frame){
     console.log(
@@ -42,7 +43,7 @@ function baz(){
 
 ```
 
-### api
+### documentation
 
 `require('v8-callsites')([frames, origin])`
 
@@ -70,6 +71,10 @@ It serves for the same use cases implemented on this cool modules
  - [sindresorhus `callsites`](https://github.com/sindresorhus/callsites)
 
 I've been using those a lot.
+
+## test
+
+    npm test
 
 ### license
 
