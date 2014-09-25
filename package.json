@@ -1,7 +1,7 @@
 {
   "name": "v8-callsites",
   "description": "V8 stacktrace API callsites with knobs",
-  "version": "1.0.28",
+  "version": "1.0.30",
   "repository": "stringparser/v8-callsites",
   "homepage": "https://github.com/stringparser/v8-callsites",
   "author": "Javier Carrillo <stringparser@gmail.com>",
@@ -19,7 +19,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "utils-type": "*"
+    "utils-type": "^0.1.32"
   },
   "devDependencies": {
     "mocha": "*",
