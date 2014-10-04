@@ -10,8 +10,8 @@ function sites(frames, origin){
   var prepare = Error.prepareStackTrace;
   var originIs = type(origin), framesIs = type(frames);
 
-  origin = framesIs.function || originIs.function || null;
-  frames = framesIs.integer > 0 || framesIs.infinity ? frames : 1;
+  origin = framesIs.function || originIs.function;
+  frames =  framesIs.integer || framesIs.infinity ? frames : 1;
 
   Error.stackTraceLimit = origin ? frames : frames + 1;
   Error.prepareStackTrace = function(err, stack){ return stack; };
