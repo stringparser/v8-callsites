@@ -19,7 +19,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "utils-type": "^0.1.36"
+    "utils-type": "^0.5.0"
   },
   "devDependencies": {
     "mocha": "*",
