@@ -2,12 +2,10 @@
 
 var type = require('utils-type');
 
-exports = module.exports = sites;
-
-function sites(frames, origin){
+function callsites(frames, origin){
 
   var limit = Error.stackTraceLimit;
-  var prepare = Error.prepareStackTrace;
+  var trace = Error.prepareStackTrace;
 
   frames = type(frames); origin = type(origin);
   origin = frames.function || origin.function;
@@ -17,11 +15,13 @@ function sites(frames, origin){
   Error.prepareStackTrace = function(err, stack){ return stack; };
 
   var error = new Error();
-  Error.captureStackTrace(error, origin || sites);
+  Error.captureStackTrace(error, origin || callsites);
   var stack = origin ? error.stack : error.stack.slice(1);
 
   Error.stackTraceLimit = limit;
-  Error.prepareStackTrace = prepare;
+  Error.prepareStackTrace = trace;
 
   return stack;
 }
+
+exports = module.exports = callsites;
