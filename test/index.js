@@ -5,9 +5,10 @@ var path = require('path');
 
 var testFiles = fs.readdirSync('./test');
 
-testFiles.slice(1).forEach(function(name){
+testFiles.forEach(function(name){
+  if(name === 'index.js'){ return; }
   name = path.basename(name, path.extname(name));
   describe(name, function(){
-    require('./'+name)();  // line 11!
+    require('./' + name)();  // line 12!
   });
 });

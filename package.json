@@ -26,6 +26,6 @@
     "should": "*"
   },
   "scripts": {
-    "test": "mocha --reporter spec test/_main.js"
+    "test": "mocha --reporter spec test/index.js"
   }
 }

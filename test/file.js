@@ -11,7 +11,7 @@ module.exports = function(){
   it('should return test.main filename', function(){
     should(call[0].getFileName())
       .equal(
-        __filename.replace(path.basename(__filename), '_main.js')
+        __filename.replace(path.basename(__filename), 'index.js')
       );
   });
 

@@ -8,7 +8,7 @@ module.exports = function(){
   var call = calls();
 
   it('should return the line number', function(){
-    should(call[0].getLineNumber()).equal(11);
+    should(call[0].getLineNumber()).equal(12);
   });
 
 };
