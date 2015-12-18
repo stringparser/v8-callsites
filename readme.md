@@ -1,8 +1,6 @@
-# v8-callsites [<img alt="progressed.io" src="http://progressed.io/bar/99" align="right"/>](https://github.com/fehmicansaglam/progressed.io)
+# v8-callsites [![NPM version][npm-badge]][npm-link] [![downloads][npm-downloads-badge]][npm-link]
 
-[<img alt="build" src="http://img.shields.io/travis/stringparser/v8-callsites/master.svg?style=flat-square" align="left"/>](https://travis-ci.org/stringparser/v8-callsites/builds)
-[<img alt="NPM version" src="http://img.shields.io/npm/v/v8-callsites.svg?style=flat-square" align="right"/>](http://www.npmjs.org/package/v8-callsites)
-<br>
+[![build][travis-badge]][travis-link]
 
 [V8 stacktrace API](https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi) callsites with knobs.
 
@@ -78,4 +76,13 @@ I've been using those a lot.
 
 ### license
 
-[<img alt="LICENSE" src="http://img.shields.io/npm/l/v8-callsites.svg?style=flat-square"/>](http://opensource.org/licenses/MIT)
+[![LICENSE](http://img.shields.io/npm/l/v8-callsites.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+
+<!-- links -->
+[npm-link]: http://www.npmjs.org/package/v8-callsites
+[npm-badge]: http://img.shields.io/npm/v/v8-callsites.svg?style=flat-square
+
+[npm-downloads-badge]: http://img.shields.io/npm/dm/v8-callsites.svg?style=flat-square
+
+[travis-link]: https://travis-ci.org/stringparser/v8-callsites/builds
+[travis-badge]: http://img.shields.io/travis/stringparser/v8-callsites/master.svg?style=flat-square
