@@ -2,10 +2,12 @@
 
 var type = require('utils-type');
 
-function callsites(frames, origin){
+exports = module.exports = callsites;
 
-  var limit = Error.stackTraceLimit;
-  var trace = Error.prepareStackTrace;
+var limit = Error.stackTraceLimit;
+var trace = Error.prepareStackTrace;
+
+function callsites(frames, origin){
 
   frames = type(frames); origin = type(origin);
   origin = frames.function || origin.function;
@@ -23,5 +25,3 @@ function callsites(frames, origin){
 
   return stack;
 }
-
-exports = module.exports = callsites;
