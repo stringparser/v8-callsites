@@ -18,9 +18,6 @@
     "knobs"
   ],
   "license": "MIT",
-  "dependencies": {
-    "utils-type": "*"
-  },
   "devDependencies": {
     "mocha": "*",
     "should": "*"
