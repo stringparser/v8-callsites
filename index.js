@@ -8,13 +8,11 @@ var limit = Error.stackTraceLimit;
 var trace = Error.prepareStackTrace;
 
 function callsites(frames, origin){
-
-  frames = type(frames); origin = type(origin);
-  origin = frames.function || origin.function;
-  frames = Math.abs(frames.integer) || frames.infinity || 1;
+  origin = type(origin || frames).function;
+  frames = Math.abs(type(frames).number) || 1;
 
   Error.stackTraceLimit = origin ? frames : frames + 1;
-  Error.prepareStackTrace = function(err, stack){ return stack; };
+  Error.prepareStackTrace = function(_, stack){ return stack; };
 
   var error = new Error();
   Error.captureStackTrace(error, origin || callsites);
